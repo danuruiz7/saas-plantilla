@@ -135,3 +135,11 @@ export async function getTenantBySlugService(slug: string): Promise<typeof tenan
   return tenant ?? null;
 }
 
+export async function getPublicTenantsService(limit = 6): Promise<typeof tenants.$inferSelect[]> {
+  const data = await db.query.tenants.findMany({
+    where: and(isNull(tenants.deletedAt), eq(tenants.isActive, true)),
+    orderBy: (t, { asc }) => asc(t.createdAt),
+    limit,
+  });
+  return data;
+}

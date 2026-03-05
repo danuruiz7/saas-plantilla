@@ -15,11 +15,13 @@ import {
   updateMyTenantController,
   getMyTenantController,
   getTenantBySlugController,
+  getPublicTenantsController,
 } from './tenants.controller.js';
 
 export const tenantsRouter: Router = Router();
 
 // Public routes
+tenantsRouter.get('/public', getPublicTenantsController);
 tenantsRouter.get('/public/:slug', getTenantBySlugController);
 
 // Endpoint for creating invitations relies on its own role check inside the service

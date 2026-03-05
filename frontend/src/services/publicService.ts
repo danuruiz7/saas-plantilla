@@ -15,6 +15,10 @@ export interface PublicTenant {
 }
 
 export const publicService = {
+  getPublicTenants: async (): Promise<PublicTenant[]> => {
+    const response = await api.get<PublicTenant[]>('/tenants/public');
+    return response.data;
+  },
   getTenantBySlug: async (slug: string): Promise<PublicTenant> => {
     const response = await api.get<PublicTenant>(`/tenants/public/${slug}`);
     return response.data;

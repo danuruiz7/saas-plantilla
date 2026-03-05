@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
 import { createTenantSchema, updateTenantSchema, createInvitationSchema } from './tenants.schemas.js';
-import { getTenantsService, setActiveTenant, createTenant, updateTenant, deleteTenant, restoreTenant, createInvitation, getInvitations, deleteInvitation, resendInvitation, getTenantBySlugService } from './tenants.service.js';
+import { getTenantsService, setActiveTenant, createTenant, updateTenant, deleteTenant, restoreTenant, createInvitation, getInvitations, deleteInvitation, resendInvitation, getTenantBySlugService, getPublicTenantsService } from './tenants.service.js';
 import { getPaginationParams, formatPaginatedResponse } from '@/lib/pagination.js';
 import { db } from '@/db/db.js';
 import { eq } from 'drizzle-orm';
@@ -229,6 +229,25 @@ export async function getTenantBySlugController(req: Request, res: Response): Pr
     });
   } catch (error) {
     console.error("Error fetching tenant by slug:", error);
+    res.status(500).json({ error: 'INTERNAL_ERROR' });
+  }
+}
+
+export async function getPublicTenantsController(req: Request, res: Response): Promise<void> {
+  try {
+    const tenantsList = await getPublicTenantsService(9); // Limit to 9
+    
+    const mapped = tenantsList.map(t => ({
+      id: t.id,
+      name: t.name,
+      slug: t.slug,
+      logoUrl: t.logoUrl,
+      settings: t.settings,
+    }));
+    
+    res.json(mapped);
+  } catch (error) {
+    console.error("Error fetching public tenants:", error);
     res.status(500).json({ error: 'INTERNAL_ERROR' });
   }
 }
