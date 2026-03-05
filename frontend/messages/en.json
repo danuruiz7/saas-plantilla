@@ -1,0 +1,16 @@
+{
+  "Index": {
+    "title": "Welcome to {appName}"
+  },
+  "Auth": {
+    "login": {
+      "title": "Login",
+      "description": "Enter your email below to login to your account",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "forgotPassword": "Forgot your password?",
+      "submitButton": "Login",
+      "loggingIn": "Logging in..."
+    }
+  }
+}

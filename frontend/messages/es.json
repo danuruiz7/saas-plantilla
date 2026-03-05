@@ -1,0 +1,81 @@
+{
+  "Index": {
+    "title": "Bienvenido a {appName}"
+  },
+  "Auth": {
+    "login": {
+      "title": "Ingresar",
+      "description": "Ingresa tu email debajo para acceder a tu cuenta",
+      "emailLabel": "Email",
+      "passwordLabel": "Contraseña",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "submitButton": "Iniciar Sesión",
+      "loggingIn": "Iniciando..."
+    },
+    "onboarding": {
+      "title": "Crea tu espacio",
+      "description": "Configura los detalles de tu empresa para comenzar.",
+      "tenantNameLabel": "Nombre de la Empresa",
+      "tenantSlugLabel": "URL de acceso",
+      "userNameLabel": "Tu nombre",
+      "emailLabel": "Email administrativo",
+      "passwordLabel": "Contraseña maestra",
+      "slugDescription": "Este será el identificador único de tu portal.",
+      "submitButton": "Crear Cuenta",
+      "submitting": "Creando...",
+      "errors": {
+        "slugTaken": "Este identificador ya está en uso. Prueba con otro.",
+        "default": "Ocurrió un error al crear la cuenta.",
+        "unexpected": "Error inesperado de red."
+      }
+    },
+    "forgotPassword": {
+      "title": "Recuperar contraseña",
+      "description": "Ingresa tu email y te enviaremos un enlace para restablecer tu cuenta.",
+      "emailLabel": "Email",
+      "submitButton": "Enviar enlace",
+      "submitting": "Enviando...",
+      "successTitle": "Enlace enviado",
+      "successDescription": "Si existe una cuenta asociada a ese email, pronto recibirás un enlace de recuperación.",
+      "backToLogin": "Volver al Login",
+      "cancel": "Cancelar",
+      "errors": {
+        "default": "Error al procesar la solicitud.",
+        "unexpected": "Error de red inesperado."
+      }
+    },
+    "resetPassword": {
+      "title": "Nueva contraseña",
+      "description": "Ingresa tu nueva contraseña debajo.",
+      "passwordLabel": "Nueva Contraseña",
+      "confirmPasswordLabel": "Confirmar Contraseña",
+      "submitButton": "Cambiar Contraseña",
+      "submitting": "Cambiando...",
+      "successTitle": "Contraseña actualizada",
+      "successDescription": "Tu contraseña ha sido cambiada con éxito. Ahora puedes iniciar sesión.",
+      "backToLogin": "Iniciar Sesión",
+      "errors": {
+        "mismatch": "Las contraseñas no coinciden.",
+        "invalidToken": "El token es inválido o ha expirado.",
+        "default": "Ocurrió un error al restablecer la contraseña.",
+        "unexpected": "Error de red inesperado."
+      }
+    },
+    "acceptInvite": {
+      "title": "Aceptar Invitación",
+      "description": "Configura tu cuenta para unirte al equipo.",
+      "nameLabel": "Nombre Completo",
+      "passwordLabel": "Contraseña",
+      "confirmPasswordLabel": "Confirmar Contraseña",
+      "submitButton": "Unirse al Equipo",
+      "submitting": "Procesando...",
+      "successTitle": "¡Bienvenido!",
+      "successDescription": "Tu cuenta ha sido configurada. Ya puedes iniciar sesión.",
+      "errors": {
+        "mismatch": "Las contraseñas no coinciden.",
+        "invalidToken": "La invitación es inválida o ha expirado.",
+        "default": "Ocurrió un error al aceptar la invitación."
+      }
+    }
+  }
+}

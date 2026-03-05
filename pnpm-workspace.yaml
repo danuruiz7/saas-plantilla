@@ -1,0 +1,13 @@
+packages:
+  - frontend
+  - backend
+  - packages/*
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@swc/core'
+  - bcrypt
+  - esbuild
+  - msw
+  - sharp
+  - unrs-resolver

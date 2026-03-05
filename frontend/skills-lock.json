@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "computedHash": "25872a21881a950edc3db1f3329664d60405d539660ce05b3265db2de06a7dfd"
+    },
+    "nextjs-app-router-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "bdf01cb716d99c640cf02438eee71b544709730ef4d59b3cc24b8721a4540e4b"
+    },
+    "tailwind-shadcn": {
+      "source": "canatufkansu/claude-skills",
+      "sourceType": "github",
+      "computedHash": "191a7f30caf2b7b59c0682e987219dd79898e237c482daef9c916a464c496584"
+    }
+  }
+}
